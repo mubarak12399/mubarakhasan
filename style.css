@@ -1,0 +1,172 @@
+/* ========================================================= */
+/* কালার ভ্যারিয়েবল (আগের মতো) */
+/* ========================================================= */
+:root {
+    --primary-color: #38C172;     /* উজ্জ্বল সবুজ (Accent/Highlight) */
+    --secondary-color: #1A202C;  /* গাঢ় নেভি ব্লু (Footer/Dark Section) */
+    --text-color: #2D3748;        /* গাঢ় ধূসর টেক্সট */
+    --light-background: #FFFFFF;  /* সাদা ব্যাকগ্রাউন্ড */
+    --light-gray: #F7FAFC;        /* অফ-হোয়াইট সেকশন ব্যাকগ্রাউন্ড */
+}
+
+/* ========================================================= */
+/* লেআউট স্টাইল (Hero, Grid, Flex) */
+/* ========================================================= */
+body {
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-background);
+    color: var(--text-color);
+}
+
+section {
+    padding: 80px 10%;
+}
+
+h2 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* --- ১. হিরো সেকশন (সাইড বাই সাইড) --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    gap: 40px;
+    background-color: var(--light-gray);
+}
+
+.hero-content {
+    max-width: 55%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin: 10px 0 20px 0;
+}
+
+/* --- ১. হিরো সেকশন (সাইড বাই সাইড) --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    gap: 40px;
+    background-color: var(--light-gray);
+}
+
+.hero-content {
+    max-width: 55%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin: 10px 0 20px 0;
+}
+
+/* --- Hero সেকশনের ছবির স্টাইল --- */
+.hero-image {
+    max-width: 40%;
+    text-align: center; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic { 
+    width: 100%;
+    max-width: 350px; 
+    height: auto;
+    border-radius: 50%; /* ছবিটিকে পুরোপুরি গোল করবে */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); 
+    border: 8px solid var(--primary-color); /* সবুজ বর্ডার */
+    object-fit: cover; 
+    aspect-ratio: 1/1; /* এটি নিশ্চিত করে যে ছবিটি বর্গাকার আছে */
+}
+}
+
+/* --- ২. সেবাসমূহ গ্রিড (Services Grid) --- */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* কমপক্ষে ৩০০px এর কলাম */
+    gap: 25px;
+    text-align: center;
+}
+
+.service-card {
+    background-color: var(--light-background);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* হোভার এফেক্ট */
+    border-top: 3px solid var(--primary-color);
+}
+
+/* --- ৩. পোর্টফোলিও/কেস স্টাডি --- */
+.dark-section {
+    background-color: var(--secondary-color);
+    color: var(--light-background);
+}
+
+.dark-section h2 {
+    color: var(--primary-color);
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.case-study-card {
+    background-color: var(--section-background, #2C3548); /* গাঢ় ব্যাকগ্রাউন্ড */
+    padding: 30px;
+    border-radius: 8px;
+    width: 45%; /* দুই কলাম */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.case-study-card h3 {
+    color: var(--primary-color);
+}
+
+/* --- ৪. বাটন স্টাইল (আগের মতো) --- */
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px; 
+    display: inline-block;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #2AA25A;
+}
+
+.contact-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+/* ফুটার স্টাইল */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--light-background);
+    text-align: center;
+    padding: 2em 0;
+}
