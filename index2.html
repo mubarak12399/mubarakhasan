@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mubarak Hasan | Digital Marketing Expert</title>
+  <style>
+    :root {
+      --bg-color: #0a0f1a;
+      --text-color: #ffffff;
+      --accent-color: #00bfff;
+      --secondary-color: #1a2235;
+      --font: "Poppins", sans-serif;
+    }
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: var(--font);
+      background: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--secondary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--accent-color);
+      letter-spacing: 1px;
+    }
+    header .logo img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    nav a:hover {color: var(--accent-color);}
+
+    /* Hero Section */
+    #hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 10%;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    .hero-text h1 {
+      font-size: 2.2rem;
+      color: var(--accent-color);
+    }
+    .hero-text p {
+      margin: 15px 0 25px;
+      line-height: 1.6;
+    }
+    .btn {
+      background: var(--accent-color);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn:hover {background: #008ecc;}
+    .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+    .hero-image img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 4px solid var(--accent-color);
+      box-shadow: 0 4px 20px rgba(0,191,255,0.4);
+    }
+
+    section {padding: 80px 10%;}
+    h2 {
+      text-align: center;
+      color: var(--accent-color);
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    /* About */
+    #about p {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    /* Services */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+    .service {
+      background: var(--secondary-color);
+      padding: 25px;
+      border-radius: 15px;
+      transition: 0.3s;
+      text-align: center;
+    }
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0,191,255,0.2);
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .portfolio-item {
+      background: var(--secondary-color);
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .portfolio-item:hover img {transform: scale(1.05);}
+    .portfolio-item p {
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .skill {
+      background: var(--secondary-color);
+      padding: 12px 25px;
+      border-radius: 30px;
+      border: 1px solid var(--accent-color);
+      font-weight: 500;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .testimonial {
+      background: var(--secondary-color);
+      padding: 25px;
+      border-radius: 15px;
+      font-style: italic;
+    }
+
+    /* Contact */
+    .contact {text-align: center;}
+    .contact-form {
+      max-width: 500px;
+      margin: 20px auto;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+    }
+    .contact-form button {
+      background: var(--accent-color);
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .social-links a {
+      color: var(--accent-color);
+      margin: 0 10px;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+    .social-links a:hover {color: #fff;}
+
+    footer {
+      text-align: center;
+      background: var(--secondary-color);
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://i.postimg.cc/G2C3WDGc/logo-mh.png" alt="Logo">
+      MH Marketing
+    </div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-text">
+      <h1>🚀 I’m Mubarak Hasan — Digital Marketing Expert</h1>
+      <p>I help brands grow online through data-driven marketing, SEO, Google Ads & Social Media Strategy.</p>
+      <a href="#contact" class="btn">➡️ Let’s Work Together</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://i.postimg.cc/k5gVtvvS/Screenshot-11.png" alt="Mubarak Hasan">
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m Mubarak Hasan, a passionate Digital Marketer helping businesses reach their goals through creative and data-driven marketing strategies.<br><br>
+    ✔ Professional & results-focused<br>
+    ✔ Expert in YouTube & Google Ads<br>
+    ✔ Dedicated to client success</p>
+  </section>
+
+  <section id="services">
+    <h2>My Services</h2>
+    <div class="services">
+      <div class="service">YouTube Marketing</div>
+      <div class="service">Google Ads Campaigns</div>
+      <div class="service">Social Media Management</div>
+      <div class="service">SEO Optimization</div>
+      <div class="service">Content Strategy</div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+  <h2>My Portfolio</h2>
+  <div class="portfolio-grid">
+
+    <!-- Project 1 -->
+    <div class="portfolio-item">
+      <img src="https://i.postimg.cc/PJLhG2n2/Screenshot-1.png" alt="Google Ads Campaign Success" loading="lazy">
+      <p>Google Ads Campaign Success</p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="portfolio-item">
+      <img src="https://i.postimg.cc/qBn4GDQg/Audience-Retention-Visibility-Growth-North-America.png" alt="Social Media Reach Boost" loading="lazy">
+      <p>Social Media Reach Boost</p>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="portfolio-item">
+      <img src="https://i.postimg.cc/9QQ6sLPQ/Next-Level-Video-Visibility-North-America.png" alt="YouTube Channel Optimization" loading="lazy">
+      <p>YouTube Channel Optimization</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+      <div class="skill">YouTube SEO</div>
+      <div class="skill">Google Ads</div>
+      <div class="skill">Facebook Marketing</div>
+      <div class="skill">Instagram Strategy</div>
+      <div class="skill">Analytics</div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonials">
+      <div class="testimonial">"Mubarak helped us grow our YouTube channel to 10k subscribers in 3 months!"</div>
+      <div class="testimonial">"Amazing results from our Google Ads campaigns — 4x ROI achieved!"</div>
+      <div class="testimonial">"Professional, friendly, and result-oriented marketer. Highly recommended!"</div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Let’s Connect</h2>
+    <p>Ready to grow your brand online? Get in touch for digital marketing, SEO, or ad strategy support.</p>
+    <div class="contact-form">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button>Send Message</button>
+    </div>
+    <div class="social-links">
+      <a href="http://www.linkedin.com/in/mubarakhasan" target="_blank">LinkedIn</a> |
+      <a href="https://wa.me/8801749390624" target="_blank">WhatsApp</a> |
+      <a href="https://www.facebook.com/profile.php?id=61582503940795" target="_blank">Facebook</a> |
+      <a href="https://youtube.com/@hasanmarketingpro?si=HKixaBy1bfPV9YQk" target="_blank">YouTube</a> |
+      <a href="mailto:mdmubarakhasan405@gmail.com">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Mubarak Hasan | Digital Marketing Expert — Made with ❤️ by Mubarak Hasan
+  </footer>
+
+  <script>
+    // Smooth scroll animation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
